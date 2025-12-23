@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Veloces Admissions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-wrapper">
+    <form id="admissionForm">
+
+      <h2>Admissions Open 2025</h2>
+      <p class="subtitle">Apply now to secure your seat</p>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" required>
+        </div>
+
+        <div class="form-group full">
+          <label>Mobile Number *</label>
+          <div class="phone">
+            <span>+91</span>
+            <input type="tel" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>State *</label>
+          <input type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>City *</label>
+          <input type="text" required>
+        </div>
+
+      </div>
+
+      <div class="captcha">
+        CAPTCHA will come here
+      </div>
+
+      <button type="button" id="sendOtp">Send OTP</button>
+
+      <div class="otp">
+        <input type="text" placeholder="Enter OTP">
+        <button type="submit">Verify & Submit</button>
+      </div>
+
+      <p class="note">
+        By submitting, you agree to be contacted by Veloces Campus.
+      </p>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
