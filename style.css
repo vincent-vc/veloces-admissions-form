@@ -1,61 +1,50 @@
-/* =====================
-   GLOBAL RESET
-===================== */
 * {
   box-sizing: border-box;
 }
 
 html, body {
-  max-width: 100%;
+  width: 100%;
   overflow-x: hidden;
-}
-
-body {
-  background: #f4f7fb;
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
+  background: #f4f7fb;
 }
 
-/* =====================
-   FORM WRAPPER
-===================== */
+/* Wrapper */
 .form-wrapper {
   display: flex;
   justify-content: center;
-  padding: 32px;
+  padding: 30px 16px;
 }
 
-/* =====================
-   FORM CONTAINER
-===================== */
+/* Form Card */
 form {
   background: #fff;
-  max-width: 560px;
   width: 100%;
+  max-width: 560px;
   padding: 32px;
-  border-radius: 18px;
+  border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
-/* =====================
-   HEADINGS
-===================== */
+/* Headings */
 h2 {
   margin-bottom: 6px;
+  font-size: 24px;
 }
 
 .subtitle {
   font-size: 14px;
   color: #555;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
-/* =====================
-   GRID STRUCTURE
-===================== */
+/* Grid Layout */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px 18px; /* vertical | horizontal */
+  gap: 22px;
 }
 
 .form-group {
@@ -67,94 +56,68 @@ h2 {
   grid-column: span 2;
 }
 
-/* =====================
-   LABELS
-===================== */
+/* Labels & Inputs */
 label {
   font-size: 13px;
-  font-weight: 500;
   margin-bottom: 6px;
-  color: #111;
 }
 
-/* =====================
-   INPUTS & SELECTS
-===================== */
 input,
 select {
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
+  padding: 11px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
   font-size: 14px;
-  background: #f1f5f9;
+  width: 100%;
 }
 
-input:focus,
-select:focus {
-  outline: none;
-  background: #eaf1ff;
-}
-
-/* =====================
-   PHONE FIELD
-===================== */
+/* Phone Field */
 .phone {
   display: flex;
-  align-items: center;
 }
 
 .phone span {
-  padding: 14px;
-  background: #f1f5f9;
-  border-radius: 12px 0 0 12px;
+  padding: 11px 12px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
   font-size: 14px;
 }
 
 .phone input {
-  border-radius: 0 12px 12px 0;
-  width: 100%;
+  border-radius: 0 8px 8px 0;
+  border-left: none;
 }
 
-/* =====================
-   CAPTCHA
-===================== */
+/* Captcha */
 .captcha {
-  margin-top: 26px;
-  padding: 16px;
-  border: 1px dashed #bdbdbd;
+  margin-top: 20px;
+  padding: 14px;
+  border: 1px dashed #aaa;
   text-align: center;
   color: #555;
-  border-radius: 12px;
+  font-size: 14px;
 }
 
-/* =====================
-   BUTTON
-===================== */
+/* Button */
 button {
   width: 100%;
-  padding: 15px;
+  padding: 14px;
   margin-top: 22px;
-  background: #2563eb;
-  color: white;
+  background: #1e5eff;
+  color: #fff;
   border: none;
-  border-radius: 12px;
-  font-size: 15px;
-  font-weight: 500;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
 }
 
 button:hover {
-  background: #1d4ed8;
+  background: #1747cc;
 }
 
-/* =====================
-   OTP & NOTE
-===================== */
-.otp {
-  display: none;
-  margin-top: 12px;
-}
-
+/* Footer note */
 .note {
   font-size: 12px;
   color: #666;
@@ -162,19 +125,17 @@ button:hover {
   text-align: center;
 }
 
-/* =====================
-   MOBILE RESPONSIVENESS
-===================== */
+/* ================= MOBILE FIX ================= */
 @media (max-width: 768px) {
 
   .form-wrapper {
-    padding: 18px;
+    padding: 16px;
   }
 
   form {
     max-width: 100%;
-    padding: 22px;
-    border-radius: 16px;
+    padding: 20px;
+    border-radius: 12px;
   }
 
   .form-grid {
@@ -186,11 +147,6 @@ button:hover {
     grid-column: span 1;
   }
 
-  input,
-  select {
-    width: 100%;
-  }
-
   h2 {
     font-size: 20px;
   }
@@ -200,7 +156,6 @@ button:hover {
   }
 
   button {
-    font-size: 16px;
-    padding: 16px;
+    font-size: 15px;
   }
 }
