@@ -16,7 +16,6 @@
 
       <div class="form-grid">
 
-        <!-- Row 1 -->
         <div class="form-group">
           <label>Enter Name *</label>
           <input type="text" name="fullname" required />
@@ -27,7 +26,6 @@
           <input type="email" name="email" required />
         </div>
 
-        <!-- Row 2 -->
         <div class="form-group full">
           <label>Enter Mobile Number *</label>
           <div class="phone">
@@ -36,7 +34,6 @@
           </div>
         </div>
 
-        <!-- Row 3 -->
         <div class="form-group">
           <label>Select State *</label>
           <input type="text" name="state" required />
@@ -47,20 +44,18 @@
           <input type="text" name="city" required />
         </div>
 
-        <!-- Row 4 -->
         <div class="form-group full">
           <label>Your School *</label>
           <input type="text" name="school" placeholder="Enter your school name" required />
         </div>
 
-        <!-- Row 5 -->
         <div class="form-group">
           <label>Interested Course *</label>
           <select name="course" required>
             <option value="">Select your answer</option>
-            <option value="BBA">BBA</option>
-            <option value="BSc">BSc</option>
-            <option value="BA">BA</option>
+            <option>BBA</option>
+            <option>BSc</option>
+            <option>BA</option>
           </select>
         </div>
 
@@ -68,9 +63,9 @@
           <label>Interested Campus *</label>
           <select name="campus" required>
             <option value="">Select your answer</option>
-            <option value="Chennai">Chennai</option>
-            <option value="Kattankulathur">Kattankulathur</option>
-            <option value="Ramapuram">Ramapuram</option>
+            <option>Chennai</option>
+            <option>Kattankulathur</option>
+            <option>Ramapuram</option>
           </select>
         </div>
 
@@ -80,7 +75,13 @@
         CAPTCHA will come here
       </div>
 
-      <button type="submit">Send OTP</button>
+      <button type="button" id="sendOtpBtn">Send OTP</button>
+
+      <div class="otp" id="otpSection">
+        <label>Enter OTP *</label>
+        <input type="text" id="otpInput" placeholder="Enter OTP" />
+        <button type="button" id="verifyOtpBtn">Verify & Submit</button>
+      </div>
 
       <p class="note">
         By submitting, you agree to be contacted by Veloces Campus.
