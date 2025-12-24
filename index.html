@@ -45,6 +45,35 @@
           <input type="text" required>
         </div>
 
+        <!-- NEW FIELDS -->
+
+        <div class="form-group full">
+          <label>Your School *</label>
+          <input type="text" placeholder="Enter your school name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Interested Course *</label>
+          <select required>
+            <option value="">Select your answer</option>
+            <option>B.Sc Computer Science</option>
+            <option>BBA</option>
+            <option>BCA</option>
+            <option>MBA</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Interested Campus *</label>
+          <select required>
+            <option value="">Select your answer</option>
+            <option>Ajeenkya DY Patil University, Pune</option>
+            <option>Rishihood University, Delhi NCR</option>
+            <option>S-VYASA University, Bengaluru</option>
+          </select>
+        </div>
+
       </div>
 
       <div class="captcha">
@@ -53,7 +82,7 @@
 
       <button type="button" id="sendOtp">Send OTP</button>
 
-      <div class="otp">
+      <div class="otp" id="otpBox">
         <input type="text" placeholder="Enter OTP">
         <button type="submit">Verify & Submit</button>
       </div>
