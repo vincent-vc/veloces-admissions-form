@@ -6,7 +6,7 @@ const captchaCheck = document.getElementById("captchaCheck");
 
 let generatedOtp = "";
 
-/* STEP 1: SEND OTP */
+/* STEP 1: SEND OTP (DUMMY) */
 sendOtpBtn.addEventListener("click", () => {
 
   if (!captchaCheck.checked) {
@@ -14,14 +14,16 @@ sendOtpBtn.addEventListener("click", () => {
     return;
   }
 
+  // Generate 6-digit dummy OTP
   generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
-  console.log("Dummy OTP:", generatedOtp);
 
+  console.log("Dummy OTP:", generatedOtp);
   alert("OTP sent successfully (Dummy OTP: " + generatedOtp + ")");
+
   otpSection.style.display = "block";
 });
 
-/* STEP 2: VERIFY OTP + SUBMIT */
+/* STEP 2: VERIFY OTP & SUBMIT FORM */
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -49,18 +51,19 @@ form.addEventListener("submit", function (e) {
     },
     body: JSON.stringify(data)
   })
-  .then(res => {
-    if (!res.ok) throw new Error("Flow error");
-    return res.json();
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Power Automate failed");
+    }
+    return response.json();
   })
   .then(() => {
     alert("Application submitted successfully!");
     form.reset();
     otpSection.style.display = "none";
   })
-  .catch(err => {
-    console.error(err);
-    alert("Submission failed. Check Power Automate.");
+  .catch(error => {
+    console.error(error);
+    alert("Submission failed. Check Power Automate flow.");
   });
 });
-
