@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: #f4f7fb;
   font-family: Arial, sans-serif;
@@ -17,6 +26,7 @@ form {
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
+
 
 h2 {
   margin-bottom: 6px;
@@ -113,17 +123,39 @@ button:hover {
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
 
+  /* Force proper sizing */
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .form-wrapper {
+    padding: 16px;
+  }
+
+  form {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .form-group.full {
     grid-column: span 1;
   }
 
-  form {
-    padding: 20px;
-    border-radius: 12px;
+  input,
+  select {
+    width: 100%;
   }
 
   h2 {
@@ -132,6 +164,11 @@ button:hover {
 
   .subtitle {
     font-size: 13px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 14px;
   }
 
 }
