@@ -55,7 +55,7 @@ form.addEventListener("submit", function (e) {
     if (!response.ok) {
       throw new Error("Power Automate failed");
     }
-    return response.json();
+    return response.text();
   })
   .then(() => {
     alert("Application submitted successfully!");
@@ -67,4 +67,5 @@ form.addEventListener("submit", function (e) {
     alert("Submission failed. Check Power Automate flow.");
   });
 });
+
 
