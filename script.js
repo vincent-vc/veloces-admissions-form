@@ -42,7 +42,7 @@ form.addEventListener("submit", function (e) {
     source: "PowerPages"
   };
 
-  fetch("PASTE_POWER_AUTOMATE_URL_HERE", {
+  fetch("https://default7893b769b86349d4803e14f199ae8a.ee.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/210cfe3a2b7a4392bb381ac494c444fd/triggers/manual/paths/invoke?api-version=1", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -63,3 +63,4 @@ form.addEventListener("submit", function (e) {
     alert("Submission failed. Check Power Automate.");
   });
 });
+
