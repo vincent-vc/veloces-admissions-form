@@ -8,88 +8,92 @@
 </head>
 <body>
 
-  <div class="form-wrapper">
-    <form id="admissionForm">
+<div class="form-wrapper">
+  <form id="admissionForm">
 
-      <h2>Admissions Open 2026</h2>
-      <p class="subtitle">UG Application Form 2026</p>
+    <h2>Admissions Open 2026</h2>
+    <p class="subtitle">UG Application Form 2026</p>
 
-      <div class="form-grid">
+    <div class="form-grid">
 
-        <div class="form-group">
-          <label>Enter Name *</label>
-          <input type="text" name="fullname" required />
-        </div>
-
-        <div class="form-group">
-          <label>Enter Email Address *</label>
-          <input type="email" name="email" required />
-        </div>
-
-        <div class="form-group full">
-          <label>Enter Mobile Number *</label>
-          <div class="phone">
-            <span>+91</span>
-            <input type="tel" name="mobile" required />
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Select State *</label>
-          <input type="text" name="state" required />
-        </div>
-
-        <div class="form-group">
-          <label>Select City *</label>
-          <input type="text" name="city" required />
-        </div>
-
-        <div class="form-group full">
-          <label>Your School *</label>
-          <input type="text" name="school" placeholder="Enter your school name" required />
-        </div>
-
-        <div class="form-group">
-          <label>Interested Course *</label>
-          <select name="course" required>
-            <option value="">Select your answer</option>
-            <option>BBA</option>
-            <option>BSc</option>
-            <option>BA</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Interested Campus *</label>
-          <select name="campus" required>
-            <option value="">Select your answer</option>
-            <option>Chennai</option>
-            <option>Kattankulathur</option>
-            <option>Ramapuram</option>
-          </select>
-        </div>
-
+      <div class="form-group">
+        <label>Enter Name *</label>
+        <input type="text" name="fullname" required />
       </div>
 
-      <div class="captcha">
-        CAPTCHA will come here
+      <div class="form-group">
+        <label>Enter Email Address *</label>
+        <input type="email" name="email" required />
       </div>
 
-      <button type="button" id="sendOtpBtn">Send OTP</button>
-
-      <div class="otp" id="otpSection">
-        <label>Enter OTP *</label>
-        <input type="text" id="otpInput" placeholder="Enter OTP" />
-        <button type="button" id="verifyOtpBtn">Verify & Submit</button>
+      <div class="form-group full">
+        <label>Enter Mobile Number *</label>
+        <div class="phone">
+          <span>+91</span>
+          <input type="tel" name="mobile" required />
+        </div>
       </div>
 
-      <p class="note">
-        By submitting, you agree to be contacted by Veloces Campus.
-      </p>
+      <div class="form-group">
+        <label>Select State *</label>
+        <input type="text" name="state" required />
+      </div>
 
-    </form>
-  </div>
+      <div class="form-group">
+        <label>Select City *</label>
+        <input type="text" name="city" required />
+      </div>
 
-  <script src="script.js"></script>
+      <div class="form-group full">
+        <label>Your School *</label>
+        <input type="text" name="school" required />
+      </div>
+
+      <div class="form-group">
+        <label>Interested Course *</label>
+        <select name="course" required>
+          <option value="">Select your answer</option>
+          <option>BBA</option>
+          <option>BSc</option>
+          <option>BA</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Interested Campus *</label>
+        <select name="campus" required>
+          <option value="">Select your answer</option>
+          <option>Chennai</option>
+          <option>Kattankulathur</option>
+          <option>Ramapuram</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Dummy CAPTCHA -->
+    <div class="captcha">
+      <label>
+        <input type="checkbox" id="captchaCheck" />
+        I am not a robot
+      </label>
+    </div>
+
+    <button type="button" id="sendOtpBtn">Send OTP</button>
+
+    <!-- OTP Section -->
+    <div class="otp" id="otpSection">
+      <input type="text" id="otpInput" placeholder="Enter OTP" />
+      <button type="submit">Verify & Submit</button>
+    </div>
+
+    <p class="note">
+      By submitting, you agree to be contacted by Veloces Campus.
+    </p>
+
+  </form>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
