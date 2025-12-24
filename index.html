@@ -19,12 +19,12 @@
         <!-- Row 1 -->
         <div class="form-group">
           <label>Enter Name *</label>
-          <input type="text" required />
+          <input type="text" name="fullname" required />
         </div>
 
         <div class="form-group">
           <label>Enter Email Address *</label>
-          <input type="email" required />
+          <input type="email" name="email" required />
         </div>
 
         <!-- Row 2 -->
@@ -32,45 +32,45 @@
           <label>Enter Mobile Number *</label>
           <div class="phone">
             <span>+91</span>
-            <input type="tel" required />
+            <input type="tel" name="mobile" required />
           </div>
         </div>
 
         <!-- Row 3 -->
         <div class="form-group">
           <label>Select State *</label>
-          <input type="text" required />
+          <input type="text" name="state" required />
         </div>
 
         <div class="form-group">
           <label>Select City *</label>
-          <input type="text" required />
+          <input type="text" name="city" required />
         </div>
 
         <!-- Row 4 -->
         <div class="form-group full">
           <label>Your School *</label>
-          <input type="text" placeholder="Enter your school name" required />
+          <input type="text" name="school" placeholder="Enter your school name" required />
         </div>
 
         <!-- Row 5 -->
         <div class="form-group">
           <label>Interested Course *</label>
-          <select required>
+          <select name="course" required>
             <option value="">Select your answer</option>
-            <option>BBA</option>
-            <option>BSc</option>
-            <option>BA</option>
+            <option value="BBA">BBA</option>
+            <option value="BSc">BSc</option>
+            <option value="BA">BA</option>
           </select>
         </div>
 
         <div class="form-group">
           <label>Interested Campus *</label>
-          <select required>
+          <select name="campus" required>
             <option value="">Select your answer</option>
-            <option>Chennai</option>
-            <option>Kattankulathur</option>
-            <option>Ramapuram</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Kattankulathur">Kattankulathur</option>
+            <option value="Ramapuram">Ramapuram</option>
           </select>
         </div>
 
@@ -80,7 +80,7 @@
         CAPTCHA will come here
       </div>
 
-      <button type="button">Send OTP</button>
+      <button type="submit">Send OTP</button>
 
       <p class="note">
         By submitting, you agree to be contacted by Veloces Campus.
@@ -89,6 +89,6 @@
     </form>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
-
